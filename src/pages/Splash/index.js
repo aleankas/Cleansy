@@ -3,12 +3,12 @@ import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import {IMGBgSplash, ICLogoSplash} from '../../assets';
 import Login from '../Login';
 
-const Splash = () => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     <Login />;
-  //   }, 3000);
-  // }, []);
+const Splash = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Login');
+    }, 5000);
+  }, [navigation]);
   return (
     <View style={styles.pages}>
       <ImageBackground source={IMGBgSplash} style={styles.imageBg}>

@@ -5,7 +5,7 @@ import {Input, Button, Gap} from '../../components/atoms';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Login = ({navigation}) => {
+const VerifikasiOTP = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -14,11 +14,11 @@ const Login = ({navigation}) => {
         </View>
         <Gap height={100} />
         <View style={styles.content}>
-          <Input label="No. Handphone" placeholder="08116205xxxx"/>
+          <Input label="Kode OTP" placeholder="xxxx" />
           <Gap height={50} />
           <Button
-            text="Verifikasi"
-            onPress={() => navigation.navigate('VerifikasiOTP')}
+            text="Masuk"
+            onPress={() => navigation.replace('Home')}
           />
           <Gap height={50} />
         </View>
@@ -27,7 +27,7 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default VerifikasiOTP;
 
 const styles = StyleSheet.create({
   pages: {

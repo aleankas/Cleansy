@@ -2,5 +2,6 @@ import IMGBgLogin from './img_bg_login.png';
 import IMGBgSplash from './img_bg_splash.png';
 import IMGBgHeadLogin from './img_bg_head_login.png';
 import IMGBgHome from './img_bg_home.png';
+import IMGBgMain from './img_bg_main.png';
 
-export {IMGBgLogin, IMGBgSplash, IMGBgHeadLogin, IMGBgHome};
+export {IMGBgLogin, IMGBgSplash, IMGBgHeadLogin, IMGBgHome, IMGBgMain};

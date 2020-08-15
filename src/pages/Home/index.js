@@ -7,7 +7,12 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {IMGBgHome, ICLogoSmallPNG} from '../../assets';
+import {
+  IMGBgHome,
+  ICLogoSmallPNG,
+  ICBaygon,
+  ICArrowRightGreen,
+} from '../../assets';
 import {colors} from '../../utils';
 import {Gap, Button} from '../../components/atoms';
 
@@ -29,15 +34,13 @@ const Home = ({navigation}) => {
             service.
           </Text>
           <Gap height={100} />
-          <Button text="Aktifitas Survey" />
+          <Button
+            text="Aktifitas Survey"
+            type="survey-activity"
+            onPress={() => navigation.navigate('SurveyList')}
+          />
           <Gap height={50} />
-          <View style={styles.viewBtnCircle}>
-            <TouchableOpacity style={styles.btnCircle}>
-              <View style={styles.btnCircle2}>
-                <Text style={styles.txtBtnSurvey}>Mulai Survey</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
+          <Button text="Mulai Survey" type="start-survey" />
         </View>
       </ImageBackground>
     </View>
@@ -82,29 +85,5 @@ const styles = StyleSheet.create({
   txtDescApp: {
     fontSize: 20,
     textAlign: 'center',
-  },
-  btnCircle: {
-    backgroundColor: colors.primary,
-    height: 150,
-    width: 150,
-    borderRadius: 150 / 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  btnCircle2: {
-    backgroundColor: colors.secondary,
-    height: 130,
-    width: 130,
-    borderRadius: 130 / 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  txtBtnSurvey: {
-    color: colors.white,
-    fontSize: 20,
-  },
-  viewBtnCircle: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });

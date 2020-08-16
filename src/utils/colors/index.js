@@ -9,6 +9,7 @@ const mainColors = {
   grey2: '#CBCBCF',
   grey3: '#dfe4ea',
   grey4: '#E5E5E5',
+  orange: '#FF4F00',
   blue: '#0599ED',
   indigo: '#0c2461',
   skyblue: '#ACCEFF',
@@ -27,6 +28,7 @@ export const colors = {
   grey2: mainColors.grey2,
   grey3: mainColors.grey3,
   grey4: mainColors.grey4,
+  orange: mainColors.orange,
   blue: mainColors.blue,
   skyblue: mainColors.skyblue,
   text: {

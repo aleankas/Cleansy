@@ -1,9 +1,27 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import {colors} from '../../../utils';
 import {ICBaygon, ICArrowRightGreen, ICAddCircle} from '../../../assets';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
-const Button = ({text, disable, onPress, type, shimmer}) => {
+const Button = ({
+  text,
+  disable,
+  onPress,
+  type,
+  shimmer,
+  onPressBack,
+  onPressNext,
+  textBack,
+  textNext,
+}) => {
   if (disable) {
     return (
       <View style={styles.btn(disable)}>
@@ -40,9 +58,23 @@ const Button = ({text, disable, onPress, type, shimmer}) => {
 
   if (type === 'btn-add-circle') {
     return (
-      <TouchableOpacity style={styles.viewBtnAddCircle}>
+      <TouchableOpacity style={styles.viewBtnAddCircle} onPress={onPress}>
         <ICAddCircle />
       </TouchableOpacity>
+    );
+  }
+
+  if (type === 'two-text') {
+    return (
+      <View style={styles.viewBtnTwoText}>
+        <TouchableOpacity style={styles.btnTwoTextA} onPress={onPressBack}>
+          <Text style={styles.txt1}>{textBack}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnTwoTextB} onPress={onPressNext}>
+          <Text style={styles.txt2}>{textNext}</Text>
+          <ICArrowRightGreen />
+        </TouchableOpacity>
+      </View>
     );
   }
 
@@ -134,5 +166,41 @@ const styles = StyleSheet.create({
     bottom: 50,
     right: 20,
     position: 'absolute',
+  },
+  viewBtnTwoText: {
+    flexDirection: 'row',
+  },
+  btnTwoTextA: {
+    elevation: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    width: windowWidth / 2 - 20,
+    borderTopLeftRadius: 60 / 2,
+    borderBottomLeftRadius: 60 / 2,
+    borderWidth: 2,
+    borderColor: colors.secondary,
+    backgroundColor: colors.secondary,
+  },
+  txt1: {
+    color: colors.white,
+    fontSize: 16,
+  },
+  btnTwoTextB: {
+    elevation: 3,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    height: 60,
+    width: windowWidth / 2 - 20,
+    borderTopRightRadius: 60 / 2,
+    borderBottomRightRadius: 60 / 2,
+    borderWidth: 2,
+    borderColor: colors.secondary,
+    backgroundColor: colors.white,
+  },
+  txt2: {
+    color: colors.secondary,
+    fontSize: 16,
   },
 });

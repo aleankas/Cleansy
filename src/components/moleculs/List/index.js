@@ -25,13 +25,13 @@ export default List;
 
 const styles = StyleSheet.create({
   boxList: {
-    backgroundColor: '#EBEAEA',
+    backgroundColor: colors.grey4,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 20,
   },
   listOrange: {
-    backgroundColor: '#FF4F00',
+    backgroundColor: colors.orange,
     width: 7,
   },
   listData: {

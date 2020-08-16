@@ -1,6 +1,14 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Splash, Login, VerifikasiOTP,Home,SurveyList} from '../pages';
+import {
+  Splash,
+  Login,
+  VerifikasiOTP,
+  Home,
+  SurveyList,
+  SetInfoBangunan,
+  SetAreaKerja,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +30,7 @@ const Routers = () => {
         component={VerifikasiOTP}
         options={{headerShown: false}}
       />
-			<Stack.Screen
+      <Stack.Screen
         name="Home"
         component={Home}
         options={{headerShown: false}}
@@ -30,6 +38,16 @@ const Routers = () => {
       <Stack.Screen
         name="SurveyList"
         component={SurveyList}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetInfoBangunan"
+        component={SetInfoBangunan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetAreaKerja"
+        component={SetAreaKerja}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

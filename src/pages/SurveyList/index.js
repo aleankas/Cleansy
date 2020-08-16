@@ -9,17 +9,15 @@ import {
 } from 'react-native';
 import {IMGBgMain, ICArrowRightGreen, ICAddCircle} from '../../assets';
 import {colors} from '../../utils';
-import {Gap, Button} from '../../components/atoms';
+import {Gap, Button, Header} from '../../components/atoms';
 import List from '../../components/moleculs/List';
 
-const SurveyList = () => {
+const SurveyList = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <ImageBackground source={IMGBgMain} style={styles.imageBg}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.viewHeader}>
-            <Text style={styles.txtHeader}>Survey List</Text>
-          </View>
+          <Header text="Survey List" />
           <Gap height={25} />
           <View style={styles.content}>
             <List />
@@ -32,7 +30,10 @@ const SurveyList = () => {
             <List />
           </View>
         </ScrollView>
-        <Button type="btn-add-circle" />
+        <Button
+          type="btn-add-circle"
+          onPress={() => navigation.navigate('SetInfoBangunan')}
+        />
       </ImageBackground>
     </View>
   );
@@ -48,20 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
   },
-  viewHeader: {
-    backgroundColor: '#EBEAEA',
-    marginTop: 30,
-    width: '65%',
-    height: 50,
-    borderTopRightRadius: 10,
-    borderBottomRightRadius: 10,
-    justifyContent: 'center',
-  },
-  txtHeader: {
-    fontSize: 23,
-    fontWeight: 'bold',
-    marginLeft: 20,
-  },
+
   content: {
     flex: 1,
     padding: 20,

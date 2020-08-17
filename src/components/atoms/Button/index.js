@@ -78,6 +78,16 @@ const Button = ({
     );
   }
 
+  if (type === 'border-white') {
+    return (
+      <TouchableOpacity
+        style={styles.btnBorderWhite(disable)}
+        onPress={onPress}>
+        <Text style={styles.txt(disable)}>{text}</Text>
+      </TouchableOpacity>
+    );
+  }
+
   return (
     <TouchableOpacity style={styles.btn(disable)} onPress={onPress}>
       <Text style={styles.txt(disable)}>{text}</Text>
@@ -94,6 +104,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
+    elevation: 3,
+  }),
+  btnBorderWhite: (disable) => ({
+    height: 80,
+    backgroundColor: disable ? colors.grey4 : colors.primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 80 / 2,
+    borderColor: colors.white,
+    borderWidth: 1,
     elevation: 3,
   }),
   txt: (disable) => ({

@@ -107,6 +107,7 @@ const Estimasi = ({navigation}) => {
           textBack="Atur Ulang"
           textNext="Simpan Estimasi"
           onPressBack={() => navigation.goBack()}
+          onPressNext={() => navigation.replace('EstimasiSuksesInput')}
         />
       </View>
     </View>

@@ -8,6 +8,7 @@ import {
   SurveyList,
   SetInfoBangunan,
   SetAreaKerja,
+  Estimasi
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -48,6 +49,11 @@ const Routers = () => {
       <Stack.Screen
         name="SetAreaKerja"
         component={SetAreaKerja}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Estimasi"
+        component={Estimasi}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

@@ -44,6 +44,7 @@ const SetAreaKerja = ({navigation}) => {
           textBack="Tambah Interior"
           textNext="Lihat Estimasi"
           onPressBack={() => navigation.goBack()}
+          onPressNext={() => navigation.navigate('Estimasi')}
         />
       </View>
     </View>

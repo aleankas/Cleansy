@@ -27,6 +27,27 @@ const Input = ({
     setBorder(colors.grey2);
   };
 
+  if (type === 'textarea') {
+    return (
+      <View>
+        <Text style={styles.label(border)}>{label}</Text>
+        <TextInput
+          onFocus={onFocusForm}
+          style={styles.textarea(border)}
+          placeholder={placeholder}
+          numberOfLines={5}
+          multiline={true}
+          onBlur={onBlurFrom}
+          value={value}
+          onChangeText={onChangeText}
+          secureTextEntry={secureTextEntry}
+          editable={!disable}
+          selectTextOnFocus={!disable}
+        />
+      </View>
+    );
+  }
+
   return (
     <View>
       <Text style={styles.label(border)}>{label}</Text>
@@ -58,5 +79,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: border,
     borderRadius: 10,
+  }),
+  textarea: (border) => ({
+    // backgroundColor: 'red',
+    marginTop: 5,
+    paddingLeft: 10,
+    borderWidth: 1,
+    borderColor: border,
+    borderRadius: 10,
+    justifyContent: 'flex-start',
+    textAlignVertical: 'top',
   }),
 });

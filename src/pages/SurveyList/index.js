@@ -20,14 +20,14 @@ const SurveyList = ({navigation}) => {
           <Header text="Survey List" />
           <Gap height={25} />
           <View style={styles.content}>
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
+            <List onPress={() => navigation.navigate('SurveyDetail')} />
           </View>
         </ScrollView>
         <Button

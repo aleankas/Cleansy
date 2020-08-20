@@ -37,6 +37,7 @@ const SetAreaKerja = ({navigation}) => {
           <Gap height={15} />
           <Input label="Merk Interior Lantai (optional)" />
         </View>
+        <Gap height={50} />
       </ScrollView>
       <View style={styles.viewBtn}>
         <Button

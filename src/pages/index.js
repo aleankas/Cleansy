@@ -7,6 +7,7 @@ import SetInfoBangunan from './SetInfoBangunan';
 import SetAreaKerja from './SetAreaKerja';
 import Estimasi from './Estimasi';
 import EstimasiSuksesInput from './Estimasi/SuksesInput';
+import SurveyDetail from './SurveyDetail';
 
 export {
   Splash,
@@ -18,4 +19,5 @@ export {
   SetAreaKerja,
   Estimasi,
   EstimasiSuksesInput,
+  SurveyDetail,
 };

@@ -4,7 +4,7 @@ import {Gap} from '../../atoms';
 import {ICArrowRightGreen} from '../../../assets';
 import {colors} from '../../../utils';
 
-const List = ({type}) => {
+const List = ({type, onPress}) => {
   if (type === 'list-estimasi') {
     return (
       <View style={styles.viewEstimasi}>
@@ -27,8 +27,22 @@ const List = ({type}) => {
     );
   }
 
+  if (type === 'list-without-icon') {
+    return (
+      <TouchableOpacity style={styles.boxList} onPress={onPress}>
+        <View style={styles.listOrange}></View>
+        <Gap width={10} />
+        <View style={styles.listData}>
+          <Text style={styles.txtNamaGedung}>Kantor GOJEK Blok M Plaza</Text>
+          <Text style={styles.txtTypeGedung}>Gedung</Text>
+          <Text>17/08/2020</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
+
   return (
-    <TouchableOpacity style={styles.boxList}>
+    <TouchableOpacity style={styles.boxList} onPress={onPress}>
       <View style={styles.listOrange}></View>
       <Gap width={10} />
       <View style={styles.listData}>
@@ -47,14 +61,17 @@ export default List;
 
 const styles = StyleSheet.create({
   boxList: {
-    backgroundColor: colors.grey4,
+    backgroundColor: colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 20,
+    borderRadius: 10,
+    elevation: 3,
   },
   listOrange: {
     backgroundColor: colors.orange,
     width: 7,
+    borderRadius: 10,
   },
   listData: {
     padding: 10,

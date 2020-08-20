@@ -28,13 +28,19 @@ const SetInfoBangunan = ({navigation}) => {
         <View style={styles.content}>
           {/* <Gap height={30} /> */}
           <Input
+            label="Jenis Bangunan"
+            placeholder="Contoh: Ruko, Gedung, Hall"
+          />
+          <Gap height={30} />
+          <Input
             label="Nama Bangunan"
             placeholder="Contoh: Kantor Permata Indonesia"
           />
           <Gap height={30} />
           <Input
-            label="Jenis Bangunan"
-            placeholder="Contoh: Ruko, Gedung, Hall"
+            label="Alamat"
+            placeholder="Contoh: Jalan Cidodol Raya No 40, Kelurahan Grogol Selatan, Kecamatan Kebayoran Lama, Jakarta Selatan"
+            type="textarea"
           />
         </View>
       </ScrollView>

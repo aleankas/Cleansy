@@ -33,14 +33,18 @@ const Home = ({navigation}) => {
             Aplikasi survey biaya dan perlengkapan layanan kebersihan / cleaning
             service.
           </Text>
-          <Gap height={100} />
+          <Gap height={50} />
           <Button
             text="Aktifitas Survey"
             type="survey-activity"
             onPress={() => navigation.navigate('SurveyList')}
           />
           <Gap height={50} />
-          <Button text="Mulai Survey" type="start-survey" />
+          <Button
+            text="Mulai Survey"
+            type="start-survey"
+            onPress={() => navigation.navigate('SetAreaKerja')}
+          />
         </View>
       </ImageBackground>
     </View>
@@ -72,18 +76,18 @@ const styles = StyleSheet.create({
   },
   txtName: {
     color: colors.white,
-    fontSize: 23,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   txtWelcome: {
     color: colors.white,
-    fontSize: 20,
+    // fontSize: 20,
   },
   content: {
     padding: 20,
   },
   txtDescApp: {
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'center',
   },
 });

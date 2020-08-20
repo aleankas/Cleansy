@@ -10,6 +10,7 @@ import {
   SetAreaKerja,
   Estimasi,
   EstimasiSuksesInput,
+  SurveyDetail,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -60,6 +61,11 @@ const Routers = () => {
       <Stack.Screen
         name="EstimasiSuksesInput"
         component={EstimasiSuksesInput}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SurveyDetail"
+        component={SurveyDetail}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

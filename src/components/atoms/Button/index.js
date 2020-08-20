@@ -35,7 +35,7 @@ const Button = ({
       <TouchableOpacity style={styles.viewBtnSurveyActivity} onPress={onPress}>
         <View style={styles.viewBtnSurveyActivity2}>
           <ICBaygon />
-          <Text style={{padding: 30}}>{text}</Text>
+          <Text style={{padding: 10}}>{text}</Text>
         </View>
         <View style={styles.viewBtnSurveyActivity3}>
           <ICArrowRightGreen />
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   txtBtnSurvey: {
     color: colors.white,
-    fontSize: 20,
+    fontSize: 18,
   },
   viewBtnCircle: {
     justifyContent: 'center',

@@ -100,6 +100,7 @@ const Estimasi = ({navigation}) => {
             </View>
           </View>
         </View>
+        <Gap height={30} />
       </ScrollView>
       <View style={styles.viewBtn}>
         <Button
